@@ -9,12 +9,12 @@
 import Foundation
 import CoreData
 class DataController {
-    var managedObjectContext: NSManagedObjectContext? {
+    var context: NSManagedObjectContext? {
         return persistentContainer?.viewContext
     }
     
     var persistentContainer: NSPersistentContainer?
-    init(_ completion: @escaping () -> ()) {
+    init(_ completionHanlder: @escaping () -> ()) {
         /*
          The persistent container for the application. This implementation
          creates and returns a container, having loaded the store for the
